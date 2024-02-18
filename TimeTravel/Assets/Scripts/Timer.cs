@@ -11,9 +11,11 @@ public class Timer : MonoBehaviour
     public GameObject transitionVolume;
 
     [SerializeField] TextMeshProUGUI timerText;
-    public float timeLimit = 120f;
+    float timeLimit = 5f;
     float remainingTime;
     public float transitionTime = 3f;
+
+    public GameObject dinosaur;
 
 
     private GameObject player;
@@ -24,6 +26,7 @@ public class Timer : MonoBehaviour
     public AudioClip past, future,glitch;
     private bool playedAlready = false;
 
+
  
 
 
@@ -32,6 +35,7 @@ public class Timer : MonoBehaviour
     { 
         remainingTime = timeLimit;
         moveToPrevPosition();
+
         if (GameManager.instance.currentLevel == GameManager.Level.PAST)
         {
             SoundManager.Instance.PlaySoundloop(past, player.transform);
@@ -39,6 +43,7 @@ public class Timer : MonoBehaviour
         else
         {
             SoundManager.Instance.PlaySoundloop(future, player.transform);
+
         }
 
     }

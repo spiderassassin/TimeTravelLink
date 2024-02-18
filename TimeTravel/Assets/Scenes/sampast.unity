@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -909,7 +909,7 @@ Transform:
   - {fileID: 655814070}
   - {fileID: 1320579726}
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &463279738
 GameObject:
@@ -2137,7 +2137,7 @@ Transform:
   - {fileID: 1064163616}
   - {fileID: 526500987}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &719735934
 GameObject:
@@ -2739,7 +2739,7 @@ Transform:
   - {fileID: 916608121}
   - {fileID: 1470554763}
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &994334462
 PrefabInstance:
@@ -3115,6 +3115,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bc1fcef4e5d14723be5112fdadebff4, type: 3}
+--- !u!1 &1096950163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096950164}
+  m_Layer: 0
+  m_Name: eggwaves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1096950164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096950163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.377194, y: 9.558077, z: 7.749529}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1125356184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,8 +3312,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionVolume: {fileID: 606507286}
   timerText: {fileID: 2060734931}
-  timeLimit: 60
   transitionTime: 3
+  dinosaur: {fileID: 0}
   past: {fileID: 8300000, guid: 35b1ba1f59490cd4fbd4cf6b5cece465, type: 3}
   future: {fileID: 8300000, guid: bf50f71e8f8f7f24494a9a8368b210a4, type: 3}
   glitch: {fileID: 8300000, guid: 558f8a9131915bf4283a1fe14bdfd45f, type: 3}
@@ -4228,7 +4259,7 @@ Transform:
   - {fileID: 823237217}
   - {fileID: 671117522}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1401226937
 GameObject:
@@ -4427,6 +4458,8 @@ MonoBehaviour:
   currentLevel: 0
   playerPosition: {x: 0, y: 0, z: 0}
   playerRotation: {x: 0, y: 0, z: 0, w: 0}
+  NumberOfEggs: 0
+  nthPast: 0
 --- !u!4 &1408608016
 Transform:
   m_ObjectHideFlags: 0
@@ -4950,7 +4983,7 @@ Transform:
   - {fileID: 1557784450}
   - {fileID: 4472179}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1536581044
 PrefabInstance:

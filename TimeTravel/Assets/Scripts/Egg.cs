@@ -45,8 +45,11 @@ public class Egg : MonoBehaviour
             brokenEggModel.SetActive(true);
             eggBreakParticles.Play();
             OnEggBreak?.Invoke(this, new OnEggBreakEventArgs { brokenEggId = dinoEggId }); ;
-            
+
             // play egg crack sound
+
+            // decrement egg num
+            GameManager.instance.NumberOfEggs--;
         }
     }
 
