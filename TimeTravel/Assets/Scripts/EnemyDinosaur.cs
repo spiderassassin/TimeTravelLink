@@ -8,6 +8,7 @@ public class EnemyDinosaur : MonoBehaviour
     [SerializeField] private NavMeshAgent navMeshAgent;
     //[SerializeField] private Transform target;
     [SerializeField] private Transform player;
+    [SerializeField] private EnemyVisual enemyVisual;
 
     private enum EnemyState
     {
@@ -76,9 +77,10 @@ public class EnemyDinosaur : MonoBehaviour
 
                         // ATTACK
                         Debug.Log("Dino attack player!");
+                        enemyVisual.PlayBite(EndAttack);
                         // Deal damage to player
                         nextAttackTimer = Time.time + attackRate;
-                        //state = EnemyState.Attacking (not doing this because we're currently only doing contact damage, due to no attack animation)
+                        state = EnemyState.Attacking;
 
                         // (stop moving)
                         navMeshAgent.destination = transform.position;
@@ -98,12 +100,19 @@ public class EnemyDinosaur : MonoBehaviour
                 }
                 break;
             case EnemyState.Attacking:
-                // With how we're handling enemy attacks in this game (contact damage only),
-                // because we have no attack animation,
-                // we should never enter this state.
+                // Do nothing. Wait for the EndAttack() function to be triggered at the end of the bite animation.
                 break;
         }
 
+    }
+
+    private void EndAttack()
+    {
+        if(state == EnemyState.Attacking)
+        {
+            Debug.Log("Dino attack animation end!");
+            state = EnemyState.ChasePlayer;
+        }
     }
 
     private void SetNewRoamingPosition()
@@ -114,7 +123,7 @@ public class EnemyDinosaur : MonoBehaviour
 
     private Vector3 GetRoamingPosition()
     {
-        Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f))
+        Vector3 randomDirection = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f))
             .normalized;
 
         float randomDistance = Random.Range(roamDisplacementMin, roamDisplacementMax);
