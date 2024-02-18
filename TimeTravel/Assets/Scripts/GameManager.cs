@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     public enum Level { PAST, FUTURE}
 
     private GameState state;
-    private Level currentLevel = Level.PAST;
+    public Level currentLevel;
     public Vector3 playerPosition;
     public Quaternion playerRotation;
 
@@ -30,6 +31,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "past")
+        {
+            currentLevel = Level.PAST;
+        }
+        else
+        {
+            currentLevel = Level.FUTURE;
+        }
+
+
+    }
 
     public void updateGameState(GameState newState)
     {
@@ -67,11 +83,7 @@ public class GameManager : MonoBehaviour
 
     
 
-        // Start is called before the first frame update
-        void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()

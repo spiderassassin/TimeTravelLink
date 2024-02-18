@@ -3,7 +3,12 @@ guid: 1fdeaa1a5c2b7d14793a1497982d1f17
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - transitionVolume: {instanceID: 0}
+  - timerText: {instanceID: 0}
+  - past: {instanceID: 0}
+  - future: {instanceID: 0}
+  - glitch: {fileID: 8300000, guid: 558f8a9131915bf4283a1fe14bdfd45f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

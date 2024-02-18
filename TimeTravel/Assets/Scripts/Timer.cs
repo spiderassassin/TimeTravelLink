@@ -13,15 +13,33 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     float timeLimit = 10f;
     float remainingTime;
+    public float transitionTime = 3f;
+
 
     private GameObject player;
     private CharacterController controller;
     private Transform trans;
+
+
+    public AudioClip past, future,glitch;
+    private bool playedAlready = false;
+
+ 
+
+
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         remainingTime = timeLimit;
         moveToPrevPosition();
+        if (GameManager.instance.currentLevel == GameManager.Level.PAST)
+        {
+            SoundManager.Instance.PlaySoundloop(past, player.transform);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySoundloop(future, player.transform);
+        }
 
     }
 
@@ -47,9 +65,11 @@ public class Timer : MonoBehaviour
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
-            if (remainingTime < 6)
+            if (remainingTime < transitionTime && playedAlready == false)
             {
+                SoundManager.Instance.PlaySoundOnce(glitch, player.transform);
                 transitionVolume.SetActive(true);
+                playedAlready = true;
             }
         }
  
@@ -58,6 +78,7 @@ public class Timer : MonoBehaviour
             remainingTime = 0;
             transitionVolume.SetActive(false);
             SceneManager.LoadScene(GameManager.instance.nextLevel(player.transform.position,player.transform.rotation));
+
         }
 
         
