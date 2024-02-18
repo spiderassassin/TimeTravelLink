@@ -349,7 +349,7 @@ Transform:
   m_GameObject: {fileID: 138588700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.084, y: -0.832, z: -0.263}
-  m_LocalScale: {x: 27.292234, y: 1, z: 28.773428}
+  m_LocalScale: {x: 60, y: 1, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1263,6 +1263,8 @@ MonoBehaviour:
   currentLevel: 0
   playerPosition: {x: 0, y: 0, z: 0}
   playerRotation: {x: 0, y: 0, z: 0, w: 0}
+  NumberOfEggs: 28
+  nthPast: 0
 --- !u!4 &1056321348
 Transform:
   m_ObjectHideFlags: 0
@@ -1690,8 +1692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionVolume: {fileID: 941492799}
   timerText: {fileID: 99946134}
-  timeLimit: 120
   transitionTime: 3
+  dinosaur: {fileID: 1303574184}
   past: {fileID: 8300000, guid: 35b1ba1f59490cd4fbd4cf6b5cece465, type: 3}
   future: {fileID: 8300000, guid: bf50f71e8f8f7f24494a9a8368b210a4, type: 3}
   glitch: {fileID: 8300000, guid: 558f8a9131915bf4283a1fe14bdfd45f, type: 3}
@@ -1870,6 +1872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 915ec36d196dd974397df071643f8bd0, type: 3}
+--- !u!1 &1303574184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 421808704163077084, guid: 915ec36d196dd974397df071643f8bd0, type: 3}
+  m_PrefabInstance: {fileID: 1303574183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401226937
 GameObject:
   m_ObjectHideFlags: 0

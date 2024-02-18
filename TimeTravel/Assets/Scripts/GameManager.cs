@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Vector3 playerPosition;
     public Quaternion playerRotation;
 
+    public int NumberOfEggs = 28;
+    public int nthPast = 0;
+
     public static event Action<GameState> OnGameStateChanged;
 
     private void Awake()
@@ -68,6 +71,8 @@ public class GameManager : MonoBehaviour
         // store player position
         playerPosition = p;
         playerRotation = r;
+        
+
 
         if (currentLevel == Level.PAST)
         {
@@ -76,6 +81,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            nthPast++;
+            Debug.Log(nthPast);
+            
             currentLevel = Level.PAST;
             return "past"; // past scene name
         }
