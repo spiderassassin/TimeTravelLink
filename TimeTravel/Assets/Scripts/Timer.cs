@@ -30,13 +30,13 @@ public class Timer : MonoBehaviour
         trans = player.transform;
 
         // disable controller to allow teleporting
-        if (GameManager.instance.lastPlayerTransform != null)
-        {
+
             controller.enabled = false;
-            trans.position = GameManager.instance.lastPlayerTransform.position;
-            trans.rotation = GameManager.instance.lastPlayerTransform.rotation;
+            trans.position = GameManager.instance.playerPosition;
+            trans.rotation = GameManager.instance.playerRotation;
+   
             controller.enabled = true;
-        }
+        
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
         else
         {
             remainingTime = 0;
-            SceneManager.LoadScene(GameManager.instance.nextLevel(player.transform));
+            SceneManager.LoadScene(GameManager.instance.nextLevel(player.transform.position,player.transform.rotation));
         }
 
         

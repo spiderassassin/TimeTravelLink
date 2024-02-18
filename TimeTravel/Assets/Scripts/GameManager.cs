@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
 
     private GameState state;
     private Level currentLevel = Level.PAST;
-    public Transform lastPlayerTransform;
+    public Vector3 playerPosition;
+    public Quaternion playerRotation;
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -46,10 +47,11 @@ public class GameManager : MonoBehaviour
         }
         OnGameStateChanged?.Invoke(newState);
     }
-    public String nextLevel(Transform t)
+    public String nextLevel(Vector3 p,Quaternion r)
     {
         // store player position
-        lastPlayerTransform = t;
+        playerPosition = p;
+        playerRotation = r;
 
         if (currentLevel == Level.PAST)
         {
