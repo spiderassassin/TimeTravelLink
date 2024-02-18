@@ -325,7 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3415c0a3510e06a4cabda6102155d40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastPlayerTransform: {fileID: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
+  playerRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!4 &593262955
 Transform:
   m_ObjectHideFlags: 0

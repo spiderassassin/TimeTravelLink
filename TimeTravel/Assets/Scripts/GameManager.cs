@@ -56,12 +56,12 @@ public class GameManager : MonoBehaviour
         if (currentLevel == Level.PAST)
         {
             currentLevel = Level.FUTURE;
-            return "test_future"; // future scene name
+            return "futuretesting"; // future scene name
         }
         else
         {
             currentLevel = Level.PAST;
-            return "test_past"; // past scene name
+            return "past"; // past scene name
         }
     }
 

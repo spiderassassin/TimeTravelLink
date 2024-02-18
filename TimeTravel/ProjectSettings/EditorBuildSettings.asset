@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/scene.unity
     guid: 31fa9f4c8a24cb24db722c9bf40cd881
   - enabled: 1
-    path: Assets/Scenes/test_past.unity
-    guid: 40e4c4b065b0ccc4cbe4dcdd885f1db6
+    path: Assets/Scenes/past.unity
+    guid: 7c472ab9ea4094bb7b7cb3fda517b770
   - enabled: 1
-    path: Assets/Scenes/test_future.unity
-    guid: 1ecf788ee300f7248837019148ff6710
+    path: Assets/Scenes/futuretesting.unity
+    guid: c8c76d728c6e24421897c818f39dbbf6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
