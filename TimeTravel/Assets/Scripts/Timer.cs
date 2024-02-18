@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 public class Timer : MonoBehaviour
 
 {
+    public GameObject transitionVolume;
 
     [SerializeField] TextMeshProUGUI timerText;
-    float timeLimit = 5f;
+    float timeLimit = 10f;
     float remainingTime;
 
     private GameObject player;
@@ -45,10 +47,16 @@ public class Timer : MonoBehaviour
         if (remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
+            if (remainingTime < 6)
+            {
+                transitionVolume.SetActive(true);
+            }
         }
+ 
         else
         {
             remainingTime = 0;
+            transitionVolume.SetActive(false);
             SceneManager.LoadScene(GameManager.instance.nextLevel(player.transform.position,player.transform.rotation));
         }
 
