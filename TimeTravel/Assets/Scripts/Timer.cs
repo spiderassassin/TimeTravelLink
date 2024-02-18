@@ -11,7 +11,8 @@ public class Timer : MonoBehaviour
     public GameObject transitionVolume;
 
     [SerializeField] TextMeshProUGUI timerText;
-    float timeLimit = 5f;
+    [SerializeField] TextMeshProUGUI HealthText;
+    float timeLimit = 30f;
     float remainingTime;
     public float transitionTime = 3f;
 
@@ -43,6 +44,10 @@ public class Timer : MonoBehaviour
         else
         {
             SoundManager.Instance.PlaySoundloop(future, player.transform);
+            for (int i = 0; i < GameManager.instance.NumberOfEggs; i++)
+            {
+                Instantiate(dinosaur);
+            }
 
         }
 
@@ -90,6 +95,9 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+        if (GameManager.instance.currentLevel == GameManager.Level.FUTURE)
+            HealthText.text = "Health: " + GameManager.instance.playerHealth.ToString();
 
     }
 }

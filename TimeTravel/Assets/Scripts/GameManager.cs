@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public int NumberOfEggs = 28;
     public int nthPast = 0;
+    public int playerHealth = 100;
 
     public static event Action<GameState> OnGameStateChanged;
 
@@ -81,8 +82,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            nthPast++;
+            nthPast++; // incrememnt number of pasts
             Debug.Log(nthPast);
+            if (nthPast > 10)
+            {
+                SceneManager.LoadScene("WinScene");
+            }
             
             currentLevel = Level.PAST;
             return "past"; // past scene name

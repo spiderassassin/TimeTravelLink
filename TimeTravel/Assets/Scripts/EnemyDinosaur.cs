@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyDinosaur : MonoBehaviour
 {
@@ -86,6 +87,11 @@ public class EnemyDinosaur : MonoBehaviour
                         Debug.Log("Dino attack player!");
                         enemyVisual.PlayBite(EndAttack);
                         // Deal damage to player
+                        GameManager.instance.playerHealth -= 5;
+                        if (GameManager.instance.playerHealth <=0)
+                        {
+                            SceneManager.LoadScene(0);
+                        } 
                         nextAttackTimer = Time.time + attackRate;
                         state = EnemyState.Attacking;
 

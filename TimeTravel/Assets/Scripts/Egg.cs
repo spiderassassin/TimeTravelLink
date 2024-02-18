@@ -50,6 +50,7 @@ public class Egg : MonoBehaviour
 
             // decrement egg num
             GameManager.instance.NumberOfEggs--;
+            Debug.Log("Egg broken " + GameManager.instance.NumberOfEggs--);
         }
     }
 

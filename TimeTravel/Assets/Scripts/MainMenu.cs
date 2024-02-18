@@ -6,9 +6,21 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioClip menuMusic;
+    public AudioSource source;
     public void Play()
     {
 
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("past");
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+        GameManager.instance.NumberOfEggs = 28;
+    }
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 }
+
