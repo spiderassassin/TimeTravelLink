@@ -10,6 +10,8 @@ public class EnemyDinosaur : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private EnemyVisual enemyVisual;
 
+    [SerializeField] private AudioClip roarSound;
+
     private enum EnemyState
     {
         Roaming,
@@ -137,6 +139,7 @@ public class EnemyDinosaur : MonoBehaviour
         {
             // Player is within target range
             state = EnemyState.ChasePlayer;
+            SoundManager.Instance.PlaySoundOnce(roarSound, transform);
         }
     }
 

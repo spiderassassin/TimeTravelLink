@@ -49,6 +49,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 7438296046932255601}
   player: {fileID: 0}
   enemyVisual: {fileID: 5128226546690289858}
+  roarSound: {fileID: 8300000, guid: 3b704c5619adb431282832bd1c550527, type: 3}
   roamTimerIntervalMin: 4
   roamTimerIntervalMax: 8
   roamDisplacementMin: 5
@@ -56,8 +57,8 @@ MonoBehaviour:
   targetRange: 10
   stopChaseDistance: 30
   reachedPositionDistance: 5
-  attackRange: 1
-  attackRate: 1.2
+  attackRange: 2.5
+  attackRate: 1.5
 --- !u!195 &7438296046932255601
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -68,10 +69,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 3
+  m_Acceleration: 7
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 300
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -79,7 +80,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3
 --- !u!1001 &3173898950313121257
 PrefabInstance:
   m_ObjectHideFlags: 0
