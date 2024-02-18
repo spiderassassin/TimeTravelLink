@@ -25,4 +25,8 @@ public class PlayerLook : MonoBehaviour
         transform.Rotate(mouseX * Time.deltaTime * xSens * Vector3.up);
 
     }
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }
