@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FutureFloor
+  m_Name: dino
   m_Shader: {fileID: -6465566751694194690, guid: a46fb3239b74e4cf392f8736b36d9a37, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -55,7 +55,7 @@ Material:
     - _QueueOffset: 0
     - _speed: 0.01
     m_Colors:
-    - _Color: {r: 0.112466075, g: 0.099368125, b: 0.7264151, a: 0}
+    - _Color: {r: 0.7254902, g: 0.22692533, b: 0.0980392, a: 0}
     - _Color_1: {r: 2.433572, g: 0.44594252, b: 0, a: 0.36078432}
     - _Hollogram_Texture_tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
