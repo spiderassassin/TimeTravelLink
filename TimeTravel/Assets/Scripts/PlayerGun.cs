@@ -6,12 +6,13 @@ public class PlayerGun : MonoBehaviour
     public float range = 100f;
 
     public Camera cam;
+    public GameObject gameObject;
 
     public void Shoot()
     {
         
         RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
+        if (Physics.Raycast(gameObject.transform.position, cam.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
             Egg egg = hit.transform.GetComponent<Egg>();

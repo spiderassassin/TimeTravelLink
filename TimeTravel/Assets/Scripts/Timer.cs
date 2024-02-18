@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public GameObject transitionVolume;
 
     [SerializeField] TextMeshProUGUI timerText;
-    float timeLimit = 10f;
+    public float timeLimit = 120f;
     float remainingTime;
     public float transitionTime = 3f;
 

@@ -381,6 +381,7 @@ Transform:
   m_Children:
   - {fileID: 1486086617}
   - {fileID: 8005781892391014315}
+  - {fileID: 740584636}
   m_Father: {fileID: 1401226940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -609,6 +610,37 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &740584635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 740584636}
+  m_Layer: 0
+  m_Name: raycast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &740584636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740584635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 607348396}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &888122710
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +957,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1456006537509713449, guid: 4bc1fcef4e5d14723be5112fdadebff4, type: 3}
+      propertyPath: eggCrackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b85ba65947494097b1d4939621defb7, type: 3}
     - target: {fileID: 7050600527423029560, guid: 4bc1fcef4e5d14723be5112fdadebff4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1238,6 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionVolume: {fileID: 606507286}
   timerText: {fileID: 2060734931}
+  timeLimit: 120
   transitionTime: 3
   past: {fileID: 8300000, guid: 35b1ba1f59490cd4fbd4cf6b5cece465, type: 3}
   future: {fileID: 8300000, guid: bf50f71e8f8f7f24494a9a8368b210a4, type: 3}
@@ -1406,6 +1443,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   cam: {fileID: 607348398}
+  gameObject: {fileID: 740584635}
 --- !u!1 &1408608014
 GameObject:
   m_ObjectHideFlags: 0
