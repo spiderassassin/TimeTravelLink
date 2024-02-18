@@ -49,6 +49,7 @@ public class EnemyDinosaur : MonoBehaviour
         startingPosition = transform.position;
         SetNewRoamingPosition();
         navMeshAgent.destination = roamPosition;
+        //enemyVisual.PlayRun();
     }
 
     private void Update()
@@ -64,12 +65,16 @@ public class EnemyDinosaur : MonoBehaviour
                 {
                     SetNewRoamingPosition();
                     navMeshAgent.destination = roamPosition;
+                    //enemyVisual.PlayRun();
                 }
                 FindTarget();
+                PlayIdleOrRunAnimation();
                 break;
 
             case EnemyState.ChasePlayer:
                 navMeshAgent.destination = player.position;
+
+                enemyVisual.PlayRun();
 
                 if (Vector3.Distance(transform.position, player.position) < attackRange)
                 {
@@ -114,6 +119,18 @@ public class EnemyDinosaur : MonoBehaviour
         {
             Debug.Log("Dino attack animation end!");
             state = EnemyState.ChasePlayer;
+        }
+    }
+
+    private void PlayIdleOrRunAnimation()
+    {
+        if(navMeshAgent.velocity.magnitude < 0.02f)
+        {
+            enemyVisual.PlayIdle();
+        }
+        else
+        {
+            enemyVisual.PlayRun();
         }
     }
 
