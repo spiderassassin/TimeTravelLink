@@ -38,6 +38,7 @@ public class Egg : MonoBehaviour
         if(state == EggState.WHOLE)
         {
             // Break the egg.
+            SoundManager.Instance.PlaySoundOnce(eggCrackSound, transform);
 
             state = EggState.BROKEN;
             wholeEggModel.SetActive(false);
