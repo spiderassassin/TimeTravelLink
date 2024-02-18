@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 607348398}
   - component: {fileID: 607348397}
   - component: {fileID: 607348399}
+  - component: {fileID: 607348400}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -415,6 +416,19 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &607348400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607348395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3874f4973486842729f393fac0331203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
 --- !u!1 &719735934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1221206381}
   - component: {fileID: 1221206380}
+  - component: {fileID: 1221206382}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -1048,6 +1063,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1221206382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221206379}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 56a0eb7ca0c1d8143bd6eba71feaf381, type: 2}
 --- !u!1 &1401226937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,6 +1639,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2956815968720846550, guid: 733a36c9b5a27421eb31aed720158190, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba7cd850277e44bf8bf9e783dabad800, type: 2}
     - target: {fileID: 5060438625622324568, guid: 733a36c9b5a27421eb31aed720158190, type: 3}
       propertyPath: m_Name
       value: idleraptor
