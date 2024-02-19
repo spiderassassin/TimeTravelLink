@@ -8,8 +8,8 @@ public class PlayerLook : MonoBehaviour
     public Camera cam; // assigned in inspector
     private float xRotation = 0f;
 
-    public float xSens = 30f;
-    public float ySens = 30f;
+    float xSens = 30f;
+    float ySens = 30f;
 
    public void ProcessLook(Vector2 input)
     {

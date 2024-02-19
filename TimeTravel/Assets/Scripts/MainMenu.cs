@@ -18,6 +18,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Menu");
         GameManager.instance.NumberOfEggs = 28;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        
+    }
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
