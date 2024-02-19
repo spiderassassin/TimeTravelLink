@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         {
             nthPast++; // incrememnt number of pasts
             Debug.Log(nthPast);
-            if (nthPast > 10)
+            if (nthPast > 5)
             {
                 SceneManager.LoadScene("WinScene");
             }

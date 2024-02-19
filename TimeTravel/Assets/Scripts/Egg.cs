@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Egg : MonoBehaviour
 {
 
@@ -51,6 +51,10 @@ public class Egg : MonoBehaviour
             // decrement egg num
             GameManager.instance.NumberOfEggs--;
             Debug.Log("Egg broken " + GameManager.instance.NumberOfEggs--);
+            if (GameManager.instance.NumberOfEggs <= 0)
+            {
+                SceneManager.LoadScene("WinScene");
+            }
         }
     }
 
